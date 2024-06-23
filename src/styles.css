@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --color-violeta: #543d8b; /* Ejemplo de color primario */
+    --color-lila: #b2b4bd; /* Ejemplo de color secundario */
+    --color-pink: #a6216a; /* Ejemplo de color de texto */
+    --color-green: #b3bf59; /* Ejemplo de color de fondo */
+ 
+    font-family: "Lato", sans-serif;
+ 
+  font-style: normal;
+   
+
+  }
+
+
