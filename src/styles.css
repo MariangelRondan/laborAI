@@ -5,15 +5,34 @@
 @tailwind utilities;
 
 :root {
-    --color-violeta: #543d8b; /* Ejemplo de color primario */
-    --color-lila: #b2b4bd; /* Ejemplo de color secundario */
-    --color-pink: #a6216a; /* Ejemplo de color de texto */
-    --color-green: #b3bf59; /* Ejemplo de color de fondo */
+    --color-violeta: #543d8b;
+    --color-lila: #b2b4bd; 
+    --color-pink: #a6216a; 
+    --color-green: #b3bf59; 
  
     font-family: "Lato", sans-serif;
  
   font-style: normal;
    
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
 
   }
 
