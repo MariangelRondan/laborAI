@@ -1,8 +1,8 @@
-<div class=" w-[60%] lg:w-[60%]  mx-auto mt-12 h-screen flex flex-col">
+<div class="flex flex-col max-h-screen w-[60%] lg:w-[60%] mx-auto mt-12 lg:min-h-screen bg-[#f4f4f4] ">
   <h1 class="text-2xl font-bold tracking-tight text-[var(--color-violeta)] sm:text-2xl">Chat</h1>
   
-  <div class="flex-1 my-6  px-5 overflow-y-auto">
-
+  <!-- Chat messages container -->
+  <div class="flex-1 my-6 px-5 overflow-y-auto">
     <ul role="list" class="space-y-3">
       <li *ngFor="let chat of chatHistory" [ngClass]="{'justify-end': chat.type === 'user', 'ml-[20%]': chat.type === 'bot'}" class="flex gap-x-4 w-[80%]">
         <img *ngIf="chat.type === 'user'" src="../../assets/user.png" alt="" class="relative mt-3 h-6 w-6 flex-none rounded-full bg-gray-50"/>
@@ -22,19 +22,20 @@
   </div>
 
   <!-- New comment form -->
-  <div class="  p-4">
+  <div class="sticky bottom-0 p-4 bg-[#f4f4f4]">
     <div class="flex gap-x-3">
       <img src="../../assets/logo-sinFondo.png" alt="" class="h-6 w-8 flex-none bg-gray-50"/>
       <form class="w-full flex flex-row" #form="ngForm" (ngSubmit)="onSubmit(form)">
-        <div class="w-full overflow-hidden cursor-text rounded-lg pb-12 shadow-sm ring-1 ring-inset ring-[var(--color-violeta)] focus-within:ring-2 focus-within:ring-indigo-600">
+        <div class="w-full overflow-hidden cursor-text rounded-lg shadow-sm ring-1 ring-inset ring-[var(--color-violeta)] focus-within:ring-2 focus-within:ring-indigo-600">
           <label for="question" class="sr-only">Pregunta aquí:</label>
           <textarea 
-          ngModel rows="1" 
-          name="question" 
-          id="question" 
-          class="block w-full cursor-text resize-none border-0 bg-transparent py-3 text-gray-900 placeholder:text-gray-600 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Que deben pagarme en la liquidación cuando me despiden?"></textarea>
+            ngModel rows="1" 
+            name="question" 
+            id="question" 
+            class="block w-full cursor-text resize-none border-0 bg-transparent py-3 text-gray-900 placeholder:text-gray-600 focus:ring-0 sm:text-sm sm:leading-6" 
+            placeholder="Que deben pagarme en la liquidación cuando me despiden?"></textarea>
         </div>
-        <div class=" inset-x-0 bottom-0 flex justify-end my-5 py-2 pl-3 pr-6">
+        <div class="flex items-end my-5 py-2 pl-3 pr-6">
           <button type="submit" class="rounded-md bg-white mx-2 px-4 py-1.5 text-md font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Send</button>
         </div>
       </form>

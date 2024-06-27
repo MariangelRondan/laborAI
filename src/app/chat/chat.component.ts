@@ -27,7 +27,7 @@ export class ChatComponent implements OnInit {
     const question = formData.form.value.question;
     const cleanQuestion = this.cleanQuestion(question)
     console.log(cleanQuestion)
-    const questionEntry = {type: 'user', text: cleanQuestion, timestamp: new Date()}
+    const questionEntry = {type: 'user', text: question, timestamp: new Date()}
     this.chatHistory.push(questionEntry);
     
     this.chatService.getChatResponse(question).subscribe(response => {
