@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
@@ -6,10 +5,6 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root',
 })
 export class ChatService {
-  api_url = 'ksdfksdjbsjksdn';
-
-  constructor(private http: HttpClient) {}
-
   getChatResponse(question: string): Observable<string> {
     // Simular una respuesta del backend
     const simulatedResponses: any = {
